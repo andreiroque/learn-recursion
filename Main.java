@@ -18,6 +18,10 @@ public class Main{
     int sum = sumOfNumbers(num);
     System.out.println("\nSum of All Numbers: " + sum);
 
+    // 4.) Fibonacci
+    int fibonacci = fibonacci(num);
+    System.out.println("Fibonacci: " + fibonacci);
+
   }
 
   public static int factorial(int num){
@@ -42,6 +46,16 @@ public class Main{
     if(num <= 1) return num;
 
     num = num + sumOfNumbers(num - 1);
+
+    return num;
+  }
+
+  public static int fibonacci(int num){
+
+    if (num == 0) return 0;
+    if (num == 1) return 1;
+    
+    num = fibonacci(num - 1) + fibonacci(num - 2);
 
     return num;
   }
