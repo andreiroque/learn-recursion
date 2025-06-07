@@ -14,6 +14,10 @@ public class Main{
     // 2.) Simple Countdown
     countdown(num);
 
+    // 3.) Sum of Numbers
+    int sum = sumOfNumbers(num);
+    System.out.println("\nSum of All Numbers: " + sum);
+
   }
 
   public static int factorial(int num){
@@ -31,6 +35,15 @@ public class Main{
       System.out.print(num + " ");
       countdown(num - 1);
     }
+  }
+
+  public static int sumOfNumbers(int num){
+
+    if(num <= 1) return num;
+
+    num = num + sumOfNumbers(num - 1);
+
+    return num;
   }
 
 }
