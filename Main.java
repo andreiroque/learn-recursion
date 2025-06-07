@@ -11,6 +11,9 @@ public class Main{
 
     System.out.println("Factor of " + num + ": "+ factor);
 
+    // 2.) Simple Countdown
+    countdown(num);
+
   }
 
   public static int factorial(int num){
@@ -20,6 +23,14 @@ public class Main{
     num = num * factorial(num - 1);
 
     return num;
-  } 
+  }
+
+  public static void countdown(int num){
+
+    if(num >= 1){
+      System.out.print(num + " ");
+      countdown(num - 1);
+    }
+  }
 
 }
