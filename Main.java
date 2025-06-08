@@ -32,6 +32,10 @@ public class Main{
     // 7.) Reverse String
     String text = "hello";
     System.out.println("Reversed text: " + reverseString(text));
+
+    // 8.) Sum of Array
+    int[] arr = {1, 2, 3, 4, 5};
+    System.out.println("Sum of Array: " + sumOfArray(arr, 0));
   }
 
   public static int factorial(int num){
@@ -93,6 +97,13 @@ public class Main{
     text = text.substring(0, text.length() - 1);
     
     return lastChar + reverseString(text);
+  }
+
+  public static int sumOfArray(int[] arr, int i){
+
+    if(i == arr.length - 1) return arr[i];
+
+    return arr[i] + sumOfArray(arr, i + 1);
   }
 
 }
