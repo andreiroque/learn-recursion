@@ -28,6 +28,10 @@ public class Main{
 
     // 6.) Digit Counter
     System.out.println("Digits Count: " + digitCounter(num));
+
+    // 7.) Reverse String
+    String text = "hello";
+    System.out.println("Reversed text: " + reverseString(text));
   }
 
   public static int factorial(int num){
@@ -78,6 +82,17 @@ public class Main{
     if(num <= 1) return 1;
 
     return digitCounter(num / 10) + 1;
+  }
+
+  public static String reverseString(String text){
+
+    if(text.length() <= 1) return text;
+
+    char lastChar = text.charAt(text.length() - 1);
+
+    text = text.substring(0, text.length() - 1);
+    
+    return lastChar + reverseString(text);
   }
 
 }
