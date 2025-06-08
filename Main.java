@@ -36,6 +36,9 @@ public class Main{
     // 8.) Sum of Array
     int[] arr = {1, 2, 3, 4, 5};
     System.out.println("Sum of Array: " + sumOfArray(arr, 0));
+
+    // 9.) Greatest Common Divisor / Greatest Common Factor
+    System.out.println("GCD: " + gcd(12, 8));
   }
 
   public static int factorial(int num){
@@ -104,6 +107,13 @@ public class Main{
     if(i == arr.length - 1) return arr[i];
 
     return arr[i] + sumOfArray(arr, i + 1);
+  }
+
+  public static int gcd(int num1, int num2){
+
+    if(num1 % num2 == 0) return num2;
+
+    return gcd(num2, num1 % num2);
   }
 
 }
