@@ -23,9 +23,11 @@ public class Main{
     System.out.println("Fibonacci: " + fibonacci);
     
     // 5.) Power
-    // num = 2;
     int pow = 5;
     System.out.println("Power: " + power(num, pow));
+
+    // 6.) Digit Counter
+    System.out.println("Digits Count: " + digitCounter(num));
   }
 
   public static int factorial(int num){
@@ -69,6 +71,13 @@ public class Main{
     if(pow == 0) return 1;
 
     return num * power(num, pow - 1);
+  }
+
+  public static int digitCounter(int num){
+
+    if(num <= 1) return 1;
+
+    return digitCounter(num / 10) + 1;
   }
 
 }
