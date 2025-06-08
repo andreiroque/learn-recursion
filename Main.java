@@ -21,7 +21,11 @@ public class Main{
     // 4.) Fibonacci
     int fibonacci = fibonacci(num);
     System.out.println("Fibonacci: " + fibonacci);
-
+    
+    // 5.) Power
+    // num = 2;
+    int pow = 5;
+    System.out.println("Power: " + power(num, pow));
   }
 
   public static int factorial(int num){
@@ -58,6 +62,13 @@ public class Main{
     num = fibonacci(num - 1) + fibonacci(num - 2);
 
     return num;
+  }
+
+  public static int power(int num, int pow){
+
+    if(pow == 0) return 1;
+
+    return num * power(num, pow - 1);
   }
 
 }
